@@ -1,28 +1,14 @@
-== README
+##Milestone 1: Basic Inventory Management 
+Due date: _____ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User stores: 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-[  ] I want to add, edit, and subtract items from a master inventory list so that I can see all of the inventory that I own in one place.  
+-[  ] I will be able to see various data (item name, PAR, current stock level, difference) about a given item. 
+-[  ] I will be able to submit request to borrow items. 
+-[  ] I will get a notification/alert when the current stock falls below PAR levels.
+-[  ] Set up active admin.... 
+ 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
