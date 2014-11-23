@@ -1,8 +1,26 @@
 <h1>Inventory List</h1>
 
-<p>Here is list of all of the items</p>
-<ul> 
-  <% @items.each do |item| %>
-    <li><%= item.name %></li> 
-  <% end %>
-</ul> 
+<table class="table table-hover"> 
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>PAR</th>
+      <th>Current Stock Level</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.PAR %></td>
+        <td><%= item.current_stock_level %></td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table> 
+
+
+
+
+
