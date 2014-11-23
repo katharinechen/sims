@@ -3,11 +3,12 @@
 
 ====Completed User Stories 
 
+  *[ Katharine ] I will be able to see various data (item name, PAR, current stock level, difference, price per unit, estimated cost to get back up to PAR levels ) about a given item. 
+  
+  *[ Katharine ] I will be able to see easily that inventory is below PAR. 
 
 ====Remaining User stores: 
 
-  *[ Katharine ] I will be able to see various data (item name, PAR, current stock level, difference, price per unit, estimated cost to get back up to PAR levels ) about a given item. 
-  *[ Katharine ] I will be able to see easily that inventory is below PAR. 
   *[  ] I want to filter more columns for the inventory master sheet using wicegrid. 
   *[  ] I want to be able to submit and edit a request to check out items for my event. 
   *[  ] I want to be able to easily see how many items are checkout and how many items are remaining. Table with the following information: item name, current_stock_levels, number_of_items_checked_out, remaining_items. 
