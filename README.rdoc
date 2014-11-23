@@ -11,11 +11,23 @@ User stores:
   *[  ] I will be able to submit request to borrow items. 
   *[  ] I will get a notification/alert when the current stock falls below PAR levels.
   *[  ] Set up active admin. 
- 
 
+==Installation
 
+Clone the repository in your terminal by entering:
 
+  git clone https://github.com/katharinechen/hacker_news.git
+  
+Setup your environment by:
 
-==Setup 
+  bundle
+  bundle update
 
-need to load seed 
+Setup your database:
+
+  rake db:schema:load
+  rake db:seed
+
+To view the website, visit in your broswer:
+
+  localhost:3000
