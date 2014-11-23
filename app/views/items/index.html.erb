@@ -1,0 +1,8 @@
+<h1>Inventory List</h1>
+
+<p>Here is list of all of the items</p>
+<ul> 
+  <% @items.each do |item| %>
+    <li><%= item.name %></li> 
+  <% end %>
+</ul> 

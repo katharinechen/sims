@@ -4,6 +4,9 @@
 User stores: 
 
   *[  ] I want to add, edit, and subtract items from a master inventory list so that I can see all of the inventory that I own in one place.  
+
+  
+  *[  ] Potentially using Wicegrid gem? 
   *[  ] I will be able to see various data (item name, PAR, current stock level, difference) about a given item. 
   *[  ] I will be able to submit request to borrow items. 
   *[  ] I will get a notification/alert when the current stock falls below PAR levels.
@@ -11,4 +14,13 @@ User stores:
  
 
 
+
+
+=README 
+
+git clone 
+
+==Testing
+
+  rspec 
 
