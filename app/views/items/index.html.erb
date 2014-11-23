@@ -2,11 +2,13 @@
 
 <%= grid(@items_grid) do |g|
 
-  g.column name: 'ID' do |item|
-    item.id
+  g.row_attributes do |item|
+    if item.difference_between_par_and_inventory < 0 
+      {style: 'background-color: rgb(246, 126, 126);'}
+    end
   end
 
-  g.column name: 'Item Name'  do |item|
+  g.column name: 'Item Name', attribute: 'name'  do |item|
     item.name
   end
 
@@ -20,6 +22,18 @@
 
   g.column  name: 'Difference' do |item|
     item.difference_between_par_and_inventory
+  end
+
+  g.column  name: 'Cost Per Unit' do |item|
+    item.cost_per_unit
+  end
+
+  g.column  name: 'Estimated Cost' do |item|
+    item.estimated_cost_to_par
+  end
+
+  g.column do |item|
+    link_to('Edit', edit_item_path(item))
   end
 
 end -%>

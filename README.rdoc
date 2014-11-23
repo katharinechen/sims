@@ -3,17 +3,17 @@
 
 ====Completed User Stories 
 
-====Working on: 
-
-  *[ Katharine ] I will be able to see various data (item name, PAR, current stock level, difference, price per unit, estimated cost to get back up to PAR levels ) about a given item. 
-  *[ Katharine ] I will get a notification/alert when the current stock falls below PAR levels.
 
 ====Remaining User stores: 
 
+  *[ Katharine ] I will be able to see various data (item name, PAR, current stock level, difference, price per unit, estimated cost to get back up to PAR levels ) about a given item. 
+  *[ Katharine ] I will be able to see easily that inventory is below PAR. 
+  *[  ] I want to filter more columns for the inventory master sheet using wicegrid. 
   *[  ] I want to be able to submit and edit a request to check out items for my event. 
   *[  ] I want to be able to easily see how many items are checkout and how many items are remaining. Table with the following information: item name, current_stock_levels, number_of_items_checked_out, remaining_items. 
   *[  ] I will be able to submit request to borrow items. 
   *[  ] Set up active admin. 
+  *[  ] I will get a notification/alert when the current stock falls below PAR levels.
 
 ==Installation
 
@@ -34,25 +34,3 @@ Setup your database:
 To view the website, visit in your broswer:
 
   localhost:3000
-
-
-  <!-- <table class="table table-hover"> 
-  <thead>
-    <tr>
-      <th>Item Name</th>
-      <th>PAR Level</th>
-      <th>Inventory Level</th>
-      <th>Difference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%# @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.PAR %></td>
-        <td><%= item.current_stock_level %></td> 
-        <td><%= item.difference_between_par_and_inventory %></td>
-      </tr>
-    <%# end %>
-  </tbody>
-</table>  -->
