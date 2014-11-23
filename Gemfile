@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'     
 gem 'jbuilder', '~> 2.0'
 gem 'autoprefixer-rails'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem "wice_grid", '3.4.2'
 
 gem 'spring',        group: :development

@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 
   def index 
     @items = Item.all 
+    @items_grid = initialize_grid(Item)
   end 
 
   def new 

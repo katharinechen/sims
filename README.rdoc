@@ -1,15 +1,18 @@
 =Milestone 1: Basic Inventory Management 
 ==Due date: Friday, 11/28/2014 
 
-User stores: 
+====Completed User Stories 
 
-  *[  ] I want to add, edit, and subtract items from a master inventory list so that I can see all of the inventory that I own in one place.  
+====Working on: 
 
-  
-  *[  ] Potentially using Wicegrid gem? 
-  *[  ] I will be able to see various data (item name, PAR, current stock level, difference) about a given item. 
+  *[ Katharine ] I will be able to see various data (item name, PAR, current stock level, difference, price per unit, estimated cost to get back up to PAR levels ) about a given item. 
+  *[ Katharine ] I will get a notification/alert when the current stock falls below PAR levels.
+
+====Remaining User stores: 
+
+  *[  ] I want to be able to submit and edit a request to check out items for my event. 
+  *[  ] I want to be able to easily see how many items are checkout and how many items are remaining. Table with the following information: item name, current_stock_levels, number_of_items_checked_out, remaining_items. 
   *[  ] I will be able to submit request to borrow items. 
-  *[  ] I will get a notification/alert when the current stock falls below PAR levels.
   *[  ] Set up active admin. 
 
 ==Installation
@@ -31,3 +34,25 @@ Setup your database:
 To view the website, visit in your broswer:
 
   localhost:3000
+
+
+  <!-- <table class="table table-hover"> 
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>PAR Level</th>
+      <th>Inventory Level</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%# @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.PAR %></td>
+        <td><%= item.current_stock_level %></td> 
+        <td><%= item.difference_between_par_and_inventory %></td>
+      </tr>
+    <%# end %>
+  </tbody>
+</table>  -->
