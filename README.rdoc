@@ -20,7 +20,7 @@
 
 Clone the repository in your terminal by entering:
 
-  git clone https://github.com/katharinechen/hacker_news.git
+  git clone https://github.com/katharinechen/sims.git
   
 Setup your environment by:
 
