@@ -3,7 +3,7 @@ class Item < ActiveRecord::Base
   validates :par, presence: true, numericality: { only_integer: true }
   validates :current_stock_level, presence: true, numericality: { only_integer: true }
 
-  attr_accessor :par, :current_stock_level
+  attr_reader :par, :current_stock_level
   
   def difference_between_par_and_inventory
     par - current_stock_level
