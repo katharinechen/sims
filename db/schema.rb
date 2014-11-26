@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126200831) do
+ActiveRecord::Schema.define(version: 20141126201717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "inventories", force: true do |t|
-    t.integer "items_id"
-    t.integer "par",         null: false
-    t.integer "stock_level", null: false
+    t.integer  "items_id"
+    t.integer  "par",         null: false
+    t.integer  "stock_level", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "inventories", ["items_id"], name: "index_inventories_on_items_id", using: :btree
