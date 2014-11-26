@@ -1,11 +1,27 @@
-class Item < ActiveRecord::Base 
+# Represents a real-world, purchaseable Item in the database
+class Item < ActiveRecord::Base
+  validates :name, presence: true
 
-  validates :name, presence: true 
-  validates :PAR, presence: true, numericality: { only_integer: true }
-  validates :current_stock_level, presence: true, numericality: { only_integer: true }
-  
-  def difference
-    return self.PAR - self.current_stock_level
-  end 
+  validates :par,
+            presence: true,
+            numericality: { only_integer: true }
 
-end 
+  validates :current_stock_level,
+            presence: true,
+            numericality: { only_integer: true }
+
+  attr_reader :par, :current_stock_level
+
+  def difference_between_par_and_inventory
+    par - current_stock_level
+  end
+
+  # replace this with real cost_per_unit later
+  def cost_per_unit
+    rand(100)
+  end
+
+  def estimated_cost_to_par
+    cost_per_unit * difference_between_par_and_inventory
+  end
+end

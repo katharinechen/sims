@@ -1,22 +1,39 @@
 <h1>Inventory List</h1>
 
-<table class="table table-hover"> 
-  <thead>
-    <tr>
-      <th>Item Name</th>
-      <th>PAR</th>
-      <th>Current Stock Level</th>
-      <th>Difference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.PAR %></td>
-        <td><%= item.current_stock_level %></td> 
-        <td><%= item.difference %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> 
+<%= grid(@items_grid) do |g|
+
+  g.row_attributes do |item|
+    if item.difference_between_par_and_inventory < 0 
+      {style: 'background-color: rgb(246, 126, 126);'}
+    end
+  end
+
+  g.column name: 'Item Name', attribute: 'name'  do |item|
+    item.name
+  end
+
+  g.column  name: 'PAR Level' do |item|
+    item.PAR
+  end
+
+  g.column  name: 'Inventory Level' do |item|
+    item.current_stock_level
+  end
+
+  g.column  name: 'Difference' do |item|
+    item.difference_between_par_and_inventory
+  end
+
+  g.column  name: 'Cost Per Unit' do |item|
+    item.cost_per_unit
+  end
+
+  g.column  name: 'Estimated Cost' do |item|
+    item.estimated_cost_to_par
+  end
+
+  g.column do |item|
+    link_to('Edit', edit_item_path(item))
+  end
+
+end -%>

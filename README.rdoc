@@ -1,21 +1,37 @@
 =Milestone 1: Basic Inventory Management 
 ==Due date: Friday, 11/28/2014 
 
-User stores: 
+====Completed User Stories 
 
-  *[  ] I want to add, edit, and subtract items from a master inventory list so that I can see all of the inventory that I own in one place.  
-
+  *[ Katharine ] I will be able to see various data (item name, PAR, current stock level, difference, price per unit, estimated cost to get back up to PAR levels ) about a given item. 
   
-  *[  ] Potentially using Wicegrid gem? 
-  *[  ] I will be able to see various data (item name, PAR, current stock level, difference) about a given item. 
+  *[ Katharine ] I will be able to see easily that inventory is below PAR. 
+
+====Remaining User stores: 
+
+  *[  ] I want to filter more columns for the inventory master sheet using wicegrid. 
+  *[  ] I want to be able to submit and edit a request to check out items for my event. 
+  *[  ] I want to be able to easily see how many items are checkout and how many items are remaining. Table with the following information: item name, current_stock_levels, number_of_items_checked_out, remaining_items. 
   *[  ] I will be able to submit request to borrow items. 
-  *[  ] I will get a notification/alert when the current stock falls below PAR levels.
   *[  ] Set up active admin. 
- 
+  *[  ] I will get a notification/alert when the current stock falls below PAR levels.
 
+==Installation
 
+Clone the repository in your terminal by entering:
 
+  git clone https://github.com/katharinechen/sims.git
+  
+Setup your environment by:
 
-==Setup 
+  bundle
+  bundle update
 
-need to load seed 
+Setup your database:
+
+  rake db:schema:load
+  rake db:seed
+
+To view the website, visit in your broswer:
+
+  localhost:3000
