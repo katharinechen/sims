@@ -4,6 +4,7 @@ describe Item do
   it { should validate_presence_of(:name) }
   it { should ensure_length_of(:name).is_at_least(3) }
   it { should ensure_length_of(:name).is_at_most(32) }
+  it { should have_many(:inventories) }
 
   context 'FactoryGirl smoke test' do
     it 'creates an Item using FactoryGirl' do
