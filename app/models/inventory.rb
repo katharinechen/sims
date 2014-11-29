@@ -7,14 +7,15 @@
 # with a physical location
 ################
 class Inventory < ActiveRecord::Base
-
   belongs_to :item
-  validates_presence_of :par
-  validates_numericality_of :par, only_integer: true, greater_than: 0
-  validates_presence_of :on_hand
-  validates_numericality_of :on_hand,
-    only_integer: true,
-    greater_than_or_equal_to: 0
+  validates :par, presence: true
+  validates :on_hand, presence: true
+  validates :par,
+            numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :on_hand,
+            numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  scope :ordered_by_item_name, -> { joins(:item).order('items.name') }
 
   def understocked?
     on_hand < par
