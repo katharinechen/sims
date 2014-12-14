@@ -1,0 +1,23 @@
+<%= grid(@inventory_grid) do |grid| 
+
+  grid.column name: "Item" do |inventory_item|
+    inventory_item.item.name
+  end
+
+  grid.column name: "PAR" do |inventory_item|
+    inventory_item.par
+  end
+
+  grid.column name: "Stock On-Hand" do |inventory_item|
+    inventory_item.on_hand
+  end
+
+  grid.column name: "PAR - Stock" do |inventory_item|
+    if inventory_item.understocked?
+      [inventory_item.to_order, {class: 'understocked' }]
+    else
+      [inventory_item.to_order, { class: 'text-muted' }]  
+    end
+  end
+end
+%>
