@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'items#index'
+  root 'inventories#index'
   resources :items
   resources :inventories, path: 'inventory'
 end
